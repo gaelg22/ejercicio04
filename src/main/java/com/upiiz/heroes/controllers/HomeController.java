@@ -1,12 +1,14 @@
 package com.upiiz.heroes.controllers;
 
-import org.springframework.web.bind.annotation.*;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 
-@RestController
+@Controller
 public class HomeController {
 
     @GetMapping("/")
-    public String redirect() {
-        return "Redirige a /marvel/socios/v1/heroes para ver los datos";
+    public String redirectToHeroes() {
+        // Redirige a /marvel/socios/v1/heroes
+        return "redirect:/marvel/socios/v1/heroes";
     }
 }
